@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex Web</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/6b69aaba17.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/icon.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container pt-3">
+      <div class="row">
+        <div class="container pt-5">
+          <div class="card text-dark bg-light">
+            <div class="card-body mb-5">
+              <center><h5 class="card-title pokeStyle mb-5">Pokedex</h5></center>
+              <h4 class="mb-3">¡Bienvenido a la pokedex!</h4>
+              <h6 class="mb-3">Se generara una consulta aleatoria cada 30 segundos.</h6>
+
+              <div class="container">
+                <div class="row mt-1 mb-5">
+                  <div id="nav" class="col mr-5">
+                    <label><b>Nombre o Número</b></label>
+                    <div class="input-group has-validation">
+                      <input
+                        id="input-search"
+                        type="text"
+                        class="form-control"
+                        placeholder="Ejemplo: 'Pikachu' o 400"
+                        aria-label="Ejemplo: 'Pikachu' o 400"
+                        aria-describedby="btnGroupAddon"
+                      />
+                      <button id="btn-search"  class="btn btn-dark"">
+                        <i  class="fa fa-search" aria-hidden="true"></i>
+                      </button>
+                      <div id="msgError" class="invalid-feedback">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-1 text-left mt-4">
+                    <button id="btn-eraser" class="btn btn-dark"><i class="fa fa-eraser" aria-hidden="true"></i></button>
+                  </div>
+                  <div class="col-2 mt-4 mr-5">
+                    <button id="btn-showPoke" class="btn btn-dark">Mostrar Pokemon</button>
+                  </div>
+                  <div class="col-3 mt-4 mr-5">
+                    <button id="btn-drawPoke" class="btn btn-dark">Mostrar lista de Pokemon</button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="cardGrid" class="row row-cols-1 row-cols-md-4 g-4"></div>
+
+              
+              <div id="navigator" class="row mt-3 d-none">
+                <div class="col-9"></div>
+                <div
+                  id="nav"
+                  class="col"
+                  style="display: flex; justify-content: flex-end"
+                >
+                  <button id="prev" class="btn btn-lg d-none">
+                    <i class="fa fa-arrow-left fa-lg navegar"></i>
+                    <br />
+                    <b>Anterior</b>
+                  </button>
+                  <button id="next" class="btn btn-lg">
+                    <i class="fa fa-arrow-right fa-lg navegar"></i>
+                    <br />
+                    <b>Siguiente</b>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/model/pokemon.js"></script>
+    <script src="js/functions.js" type="module"></script>
+  </body>
+</html>
